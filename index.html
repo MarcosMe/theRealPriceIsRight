@@ -9,27 +9,29 @@
 </head>
 
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="bg-white p-8 rounded-lg shadow-lg w-96 space-y-8">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-2xl space-y-8">
         <h1 class="text-2xl font-bold mb-6 text-center">Closest Value Calculator</h1>
 
         <!-- First Calculator -->
         <div id="calculator-1" class="space-y-4">
             <form class="space-y-4">
-                <div>
-                    <label for="input1-1" class="block text-sm font-medium text-gray-700">Input 1</label>
-                    <input type="number" step="any" id="input1-1" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
-                </div>
-                <div>
-                    <label for="input2-1" class="block text-sm font-medium text-gray-700">Input 2</label>
-                    <input type="number" step="any" id="input2-1" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
-                </div>
-                <div>
-                    <label for="input3-1" class="block text-sm font-medium text-gray-700">Input 3</label>
-                    <input type="number" step="any" id="input3-1" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
-                </div>
-                <div>
-                    <label for="input4-1" class="block text-sm font-medium text-gray-700">Input 4</label>
-                    <input type="number" step="any" id="input4-1" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                <div class="flex space-x-2">
+                    <div>
+                        <label for="input1-1" class="block text-sm font-medium text-gray-700">Input 1</label>
+                        <input type="number" step="any" id="input1-1" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="input2-1" class="block text-sm font-medium text-gray-700">Input 2</label>
+                        <input type="number" step="any" id="input2-1" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="input3-1" class="block text-sm font-medium text-gray-700">Input 3</label>
+                        <input type="number" step="any" id="input3-1" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="input4-1" class="block text-sm font-medium text-gray-700">Input 4</label>
+                        <input type="number" step="any" id="input4-1" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
                 </div>
                 <button type="button" onclick="calculateClosest(1, 10.0)" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Calculate Closest</button>
             </form>
@@ -41,21 +43,23 @@
         <!-- Second Calculator -->
         <div id="calculator-2" class="space-y-4">
             <form class="space-y-4">
-                <div>
-                    <label for="input1-2" class="block text-sm font-medium text-gray-700">Input 1</label>
-                    <input type="number" step="any" id="input1-2" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
-                </div>
-                <div>
-                    <label for="input2-2" class="block text-sm font-medium text-gray-700">Input 2</label>
-                    <input type="number" step="any" id="input2-2" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
-                </div>
-                <div>
-                    <label for="input3-2" class="block text-sm font-medium text-gray-700">Input 3</label>
-                    <input type="number" step="any" id="input3-2" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
-                </div>
-                <div>
-                    <label for="input4-2" class="block text-sm font-medium text-gray-700">Input 4</label>
-                    <input type="number" step="any" id="input4-2" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                <div class="flex space-x-2">
+                    <div>
+                        <label for="input1-2" class="block text-sm font-medium text-gray-700">Input 1</label>
+                        <input type="number" step="any" id="input1-2" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="input2-2" class="block text-sm font-medium text-gray-700">Input 2</label>
+                        <input type="number" step="any" id="input2-2" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="input3-2" class="block text-sm font-medium text-gray-700">Input 3</label>
+                        <input type="number" step="any" id="input3-2" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="input4-2" class="block text-sm font-medium text-gray-700">Input 4</label>
+                        <input type="number" step="any" id="input4-2" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
                 </div>
                 <button type="button" onclick="calculateClosest(2, 20.0)" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Calculate Closest</button>
             </form>
@@ -67,21 +71,23 @@
         <!-- Third Calculator -->
         <div id="calculator-3" class="space-y-4">
             <form class="space-y-4">
-                <div>
-                    <label for="input1-3" class="block text-sm font-medium text-gray-700">Input 1</label>
-                    <input type="number" step="any" id="input1-3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
-                </div>
-                <div>
-                    <label for="input2-3" class="block text-sm font-medium text-gray-700">Input 2</label>
-                    <input type="number" step="any" id="input2-3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
-                </div>
-                <div>
-                    <label for="input3-3" class="block text-sm font-medium text-gray-700">Input 3</label>
-                    <input type="number" step="any" id="input3-3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
-                </div>
-                <div>
-                    <label for="input4-3" class="block text-sm font-medium text-gray-700">Input 4</label>
-                    <input type="number" step="any" id="input4-3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                <div class="flex space-x-2">
+                    <div>
+                        <label for="input1-3" class="block text-sm font-medium text-gray-700">Input 1</label>
+                        <input type="number" step="any" id="input1-3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="input2-3" class="block text-sm font-medium text-gray-700">Input 2</label>
+                        <input type="number" step="any" id="input2-3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="input3-3" class="block text-sm font-medium text-gray-700">Input 3</label>
+                        <input type="number" step="any" id="input3-3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="input4-3" class="block text-sm font-medium text-gray-700">Input 4</label>
+                        <input type="number" step="any" id="input4-3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
                 </div>
                 <button type="button" onclick="calculateClosest(3, 30.0)" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Calculate Closest</button>
             </form>
@@ -97,11 +103,14 @@
                 parseFloat(document.getElementById(`input3-${calculatorNumber}`).value),
                 parseFloat(document.getElementById(`input4-${calculatorNumber}`).value)
             ];
-            const allAbove = inputs.every(value => value > predefinedNumber);
+            
+            const filteredInputs = inputs.filter(value => value <= predefinedNumber);
+            const allAbove = filteredInputs.length === 0;
+
             if (allAbove) {
                 document.getElementById(`result-${calculatorNumber}`).textContent = "All values are above, new round";
             } else {
-                const closest = inputs.reduce((prev, curr) => Math.abs(curr - predefinedNumber) < Math.abs(prev - predefinedNumber) ? curr : prev);
+                const closest = filteredInputs.reduce((prev, curr) => Math.abs(curr - predefinedNumber) < Math.abs(prev - predefinedNumber) ? curr : prev);
                 document.getElementById(`result-${calculatorNumber}`).textContent = `Closest value to ${predefinedNumber} is ${closest}`;
             }
         }
