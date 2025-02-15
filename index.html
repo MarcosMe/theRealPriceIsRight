@@ -10,7 +10,7 @@
 
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
     <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-2xl space-y-8">
-        <h1 class="text-2xl font-bold mb-6 text-center">Round winner calculator</h1>
+        <h1 class="text-2xl font-bold mb-6 text-center">First round winner calculator</h1>
 
         <!-- First Calculator -->
         <div id="calculator-1" class="space-y-4">
@@ -18,113 +18,122 @@
                 <div class="flex space-x-2">
                     <div>
                         <label for="input1-1" class="block text-sm font-medium text-gray-700">
-                            <input type="text" id="label1-1" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" value="Value from" onblur="updateLabel(1, 1)">
+                            <input type="text" id="label1-1" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" value="Price from" onblur="updateLabel(1, 1)">
                         </label>
                         <input type="number" step="any" id="input1-1" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
                     </div>
                     <div>
                         <label for="input2-1" class="block text-sm font-medium text-gray-700">
-                            <input type="text" id="label2-1" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" value="Value from" onblur="updateLabel(2, 1)">
+                            <input type="text" id="label2-1" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" value="Price from" onblur="updateLabel(2, 1)">
                         </label>
                         <input type="number" step="any" id="input2-1" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
                     </div>
                     <div>
                         <label for="input3-1" class="block text-sm font-medium text-gray-700">
-                            <input type="text" id="label3-1" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" value="Value from" onblur="updateLabel(3, 1)">
+                            <input type="text" id="label3-1" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" value="Price from" onblur="updateLabel(3, 1)">
                         </label>
                         <input type="number" step="any" id="input3-1" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
                     </div>
                     <div>
                         <label for="input4-1" class="block text-sm font-medium text-gray-700">
-                            <input type="text" id="label4-1" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" value="Value from" onblur="updateLabel(4, 1)">
+                            <input type="text" id="label4-1" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" value="Price from" onblur="updateLabel(4, 1)">
                         </label>
                         <input type="number" step="any" id="input4-1" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
                     </div>
                 </div>
-                <button type="button" id="calculate-winner-1" onclick="calculateClosest(1, 10.0)" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed" disabled>Calculate winner</button>
-            </form>
+                <div class="flex justify-center">
+                    <button type="button" id="calculate-winner-1" onclick="calculateClosest(1, 10.0)" class="w-1/2 bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed" disabled>Calculate winner</button>
+                </div>
+                </form>
             <div id="result-1" class="mt-6 text-center text-lg font-medium"></div>
         </div>
 
         <hr class="border-gray-300">
 
+        <h1 class="text-2xl font-bold mb-6 text-center">Second round winner calculator</h1>
         <!-- Second Calculator -->
         <div id="calculator-2" class="space-y-4">
             <form class="space-y-4">
                 <div class="flex space-x-2">
                     <div>
                         <label for="input1-2" class="block text-sm font-medium text-gray-700">
-                            <input type="text" id="label1-2" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" value="Value from" onblur="updateLabel(1, 2)">
+                            <input type="text" id="label1-2" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" value="Price from" onblur="updateLabel(1, 2)">
                         </label>
                         <input type="number" step="any" id="input1-2" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
                     </div>
                     <div>
                         <label for="input2-2" class="block text-sm font-medium text-gray-700">
-                            <input type="text" id="label2-2" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" value="Value from" onblur="updateLabel(2, 2)">
+                            <input type="text" id="label2-2" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" value="Price from" onblur="updateLabel(2, 2)">
                         </label>
                         <input type="number" step="any" id="input2-2" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
                     </div>
                     <div>
                         <label for="input3-2" class="block text-sm font-medium text-gray-700">
-                            <input type="text" id="label3-2" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" value="Value from" onblur="updateLabel(3, 2)">
+                            <input type="text" id="label3-2" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" value="Price from" onblur="updateLabel(3, 2)">
                         </label>
                         <input type="number" step="any" id="input3-2" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
                     </div>
                     <div>
                         <label for="input4-2" class="block text-sm font-medium text-gray-700">
-                            <input type="text" id="label4-2" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" value="Value from" onblur="updateLabel(4, 2)">
+                            <input type="text" id="label4-2" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" value="Price from" onblur="updateLabel(4, 2)">
                         </label>
                         <input type="number" step="any" id="input4-2" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
                     </div>
                 </div>
-                <button type="button" id="calculate-winner-2" onclick="calculateClosest(2, 20.0)" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed" disabled>Calculate winner</button>
-            </form>
+                <div class="flex justify-center">
+                    <button type="button" id="calculate-winner-2" onclick="calculateClosest(2, 20.0)" class="w-1/2 bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed" disabled>Calculate winner</button>
+                </div>
+                </form>
             <div id="result-2" class="mt-6 text-center text-lg font-medium"></div>
         </div>
 
         <hr class="border-gray-300">
 
+        <h1 class="text-2xl font-bold mb-6 text-center">Third round winner calculator</h1>
         <!-- Third Calculator -->
         <div id="calculator-3" class="space-y-4">
             <form class="space-y-4">
                 <div class="flex space-x-2">
                     <div>
                         <label for="input1-3" class="block text-sm font-medium text-gray-700">
-                            <input type="text" id="label1-3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" value="Value from" onblur="updateLabel(1, 3)">
+                            <input type="text" id="label1-3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" value="Price from" onblur="updateLabel(1, 3)">
                         </label>
                         <input type="number" step="any" id="input1-3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
                     </div>
                     <div>
                         <label for="input2-3" class="block text-sm font-medium text-gray-700">
-                            <input type="text" id="label2-3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" value="Value from" onblur="updateLabel(2, 3)">
+                            <input type="text" id="label2-3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" value="Price from" onblur="updateLabel(2, 3)">
                         </label>
                         <input type="number" step="any" id="input2-3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
                     </div>
                     <div>
                         <label for="input3-3" class="block text-sm font-medium text-gray-700">
-                            <input type="text" id="label3-3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" value="Value from" onblur="updateLabel(3, 3)">
+                            <input type="text" id="label3-3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" value="Price from" onblur="updateLabel(3, 3)">
                         </label>
                         <input type="number" step="any" id="input3-3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
                     </div>
                     <div>
                         <label for="input4-3" class="block text-sm font-medium text-gray-700">
-                            <input type="text" id="label4-3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" value="Value from" onblur="updateLabel(4, 3)">
+                            <input type="text" id="label4-3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" value="Price from" onblur="updateLabel(4, 3)">
                         </label>
                         <input type="number" step="any" id="input4-3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
                     </div>
                 </div>
-                <button type="button" id="calculate-winner-3" onclick="calculateClosest(3, 30.0)" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed" disabled>Calculate winner</button>
-            </form>
+                <div class="flex justify-center">
+                    <button type="button" id="calculate-winner-3" onclick="calculateClosest(3, 30.0)" class="w-1/2 bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed" disabled>Calculate winner</button>
+                </div>
+                </form>
             <div id="result-3" class="mt-6 text-center text-lg font-medium"></div>
         </div>
 
         <hr class="border-gray-300">
         <hr class="border-gray-300">
 
-        <!-- Third Calculator -->
+        <h1 class="text-2xl font-bold mb-6 text-center">Final show calculator</h1>
+        <!-- Final Calculator -->
         <div id="calculator-final" class="space-y-2">
             <form class="space-y-2">
-                <div class="flex space-x-2">
+                <div class="flex justify-center space-x-4">
                     <div>
                         <label for="value-final" class="block text-sm font-medium text-gray-700">Value</label>
                         <input type="number" step="any" id="value-final" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
@@ -134,7 +143,9 @@
                         <input type="number" step="any" id="margin-final" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
                     </div>
                 </div>
-                <button type="button" onclick="calculateIfWinnerOrNot(8)" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Will you win?</button>
+                <div class="flex justify-center">
+                    <button type="button" id="calculate-final" onclick="calculateIfWinnerOrNot(8.47)" class="w-1/2 bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed" disabled>Will you win?</button>
+                </div>
             </form>
             <div id="result-final" class="mt-6 text-center text-lg font-medium"></div>
         </div>
@@ -160,6 +171,18 @@
             });
         });
 
+        function enableFinalButton() {
+            const valueFinal = document.getElementById('value-final').value;
+            const marginFinal = document.getElementById('margin-final').value;
+
+            const allFilled = valueFinal !== '' && marginFinal !== '';
+            document.getElementById('calculate-final').disabled = !allFilled;
+        }
+
+        document.getElementById('value-final').addEventListener('input', enableFinalButton);
+        document.getElementById('margin-final').addEventListener('input', enableFinalButton);
+
+
         function calculateClosest(calculatorNumber, predefinedNumber) {
         const inputs = [
             parseFloat(document.getElementById(`input1-${calculatorNumber}`).value),
@@ -179,26 +202,34 @@
         const allAbove = filteredInputs.length === 0;
 
         if (allAbove) {
-            document.getElementById(`result-${calculatorNumber}`).textContent = "All values are above the real price, new round is needed";
+            document.getElementById(`result-${calculatorNumber}`).textContent = "All prices are above the real price, new round is needed";
         } else {
             const closestIndex = filteredInputs.reduce((prevIndex, currValue, currIndex) => 
                 Math.abs(currValue - predefinedNumber) < Math.abs(inputs[prevIndex] - predefinedNumber) ? currIndex : prevIndex, 0);
             const closest = filteredInputs[closestIndex];
-            const closestLabel = labels[inputs.indexOf(closest)];
-            document.getElementById(`result-${calculatorNumber}`).textContent = `Closest value to real price ${predefinedNumber} is ${closest}. The winner is ${closestLabel}!`;
+            const closestLabel = labels[inputs.indexOf(closest)].slice(11);
+            document.getElementById(`result-${calculatorNumber}`).textContent = `Closest price to real price ${predefinedNumber} is ${closest}. The winner is ${closestLabel}!`;
         }
     }
 
-        function calculateIfWinnerOrNot(predefinedNumber) {
+        function calculateIfWinnerOrNot(realPrice) {
             const valueFinal = parseFloat(document.getElementById(`value-final`).value);
             const marginFinal = parseFloat(document.getElementById(`margin-final`).value);
-            const difference = predefinedNumber + marginFinal - valueFinal;
+            let difference = Math.abs(Math.round((realPrice - valueFinal) * 100) / 100);
+            ;
 
-            if (valueFinal <= predefinedNumber + marginFinal) {
-                document.getElementById('result-final').textContent = `Player wins! Difference: ${difference}`;
-            } else {
-                document.getElementById('result-final').textContent = `Player loses! Difference: ${difference}`;
-            }
+            if (valueFinal > realPrice) {
+                //difference = Math.abs(Math.round((realPrice - valueFinal) * 100) / 100);
+                document.getElementById('result-final').innerText = `Final showcase price: ${realPrice} \r\n Player loses :( Above the real price: ${difference}`;
+            } else if (valueFinal + marginFinal <= realPrice + marginFinal) {
+                    if (difference > marginFinal) {
+                        //difference = Math.round((realPrice - valueFinal) * 100) / 100;
+                        document.getElementById('result-final').innerText = `Final showcase price: ${realPrice} \r\n Player loses :( Difference: ${difference}`;
+                    } else{
+                        //difference = Math.round((realPrice - valueFinal) * 100) / 100;
+                        document.getElementById('result-final').innerText = `Final showcase price: ${realPrice} \r\n Player wins! Difference: ${difference}`;
+                    }
+                } 
         }
 
         function updateLabel(inputNumber, calculatorNumber) {
