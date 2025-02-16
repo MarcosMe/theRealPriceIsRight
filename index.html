@@ -184,33 +184,40 @@
 
 
         function calculateClosest(calculatorNumber, predefinedNumber) {
-        const inputs = [
-            parseFloat(document.getElementById(`input1-${calculatorNumber}`).value),
-            parseFloat(document.getElementById(`input2-${calculatorNumber}`).value),
-            parseFloat(document.getElementById(`input3-${calculatorNumber}`).value),
-            parseFloat(document.getElementById(`input4-${calculatorNumber}`).value)
-        ];
+            const inputs = [
+                parseFloat(document.getElementById(`input1-${calculatorNumber}`).value),
+                parseFloat(document.getElementById(`input2-${calculatorNumber}`).value),
+                parseFloat(document.getElementById(`input3-${calculatorNumber}`).value),
+                parseFloat(document.getElementById(`input4-${calculatorNumber}`).value)
+            ];
 
-        const labels = [
-            document.getElementById(`label1-${calculatorNumber}`).textContent,
-            document.getElementById(`label2-${calculatorNumber}`).textContent,
-            document.getElementById(`label3-${calculatorNumber}`).textContent,
-            document.getElementById(`label4-${calculatorNumber}`).textContent
-        ];
+            const labels = [
+                document.getElementById(`label1-${calculatorNumber}`).textContent,
+                document.getElementById(`label2-${calculatorNumber}`).textContent,
+                document.getElementById(`label3-${calculatorNumber}`).textContent,
+                document.getElementById(`label4-${calculatorNumber}`).textContent
+            ];
+            let closest = null;
+            let closestLabel = '';
+            let minDifference = Infinity;
 
-        const filteredInputs = inputs.filter(value => value <= predefinedNumber);
-        const allAbove = filteredInputs.length === 0;
+            for (let i = 0; i < inputs.length; i++) {
+                if (inputs[i] <= predefinedNumber) {
+                    const difference = Math.abs(inputs[i] - predefinedNumber);
+                    if (difference < minDifference) {
+                        minDifference = difference;
+                        closest = inputs[i];
+                        closestLabel = labels[i].slice(11);
+                    }
+                }
+            }
 
-        if (allAbove) {
-            document.getElementById(`result-${calculatorNumber}`).textContent = "All prices are above the real price, new round is needed";
-        } else {
-            const closestIndex = filteredInputs.reduce((prevIndex, currValue, currIndex) => 
-                Math.abs(currValue - predefinedNumber) < Math.abs(inputs[prevIndex] - predefinedNumber) ? currIndex : prevIndex, 0);
-            const closest = filteredInputs[closestIndex];
-            const closestLabel = labels[inputs.indexOf(closest)].slice(11);
-            document.getElementById(`result-${calculatorNumber}`).textContent = `Closest price to real price ${predefinedNumber} is ${closest}. The winner is ${closestLabel}!`;
+            if (closest === null) {
+                document.getElementById(`result-${calculatorNumber}`).textContent = "All prices are above the real price, new round is needed";
+            } else {
+                document.getElementById(`result-${calculatorNumber}`).textContent = `Closest price to real price ${predefinedNumber} is ${closest}. The winner is ${closestLabel}!`;
+            }
         }
-    }
 
         function calculateIfWinnerOrNot(realPrice) {
             const valueFinal = parseFloat(document.getElementById(`value-final`).value);
